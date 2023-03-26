@@ -1,0 +1,31 @@
+﻿@page
+@model SurveyApp.Pages.DetailsModel
+@{
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Career</th>
+            <th>Programming Language</th>
+            <th>Do you have a PC</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var response in Model.responseDbTable){
+            <tr>
+                <td>@response.FullName</td>
+                <td>@response.Email</td>
+                <td> @response.Department</td>
+                <td> @response.Career</td>
+                <td> @response.ProgrammingLanguage</td>
+                <td> @response.HasPC </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+

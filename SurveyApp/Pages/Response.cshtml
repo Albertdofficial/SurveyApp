@@ -1,0 +1,49 @@
+﻿@page
+@model SurveyApp.Pages.ResponseModel
+@{
+}
+
+<div class="container d-flex align-items-center justify-content-center flex-column">
+
+    <h1>BAU Programming Club Survey Page</h1>
+    <form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 rounded-5 bg-light col-4">
+        <div class="mb-2">
+            <label>
+                <span>Full name:</span>
+                <input type="text" asp-for="Response.FullName" class="form-control" />
+            </label>
+        </div>
+        <div class="mb-2">
+            <label>
+                <span>Email:</span>
+                <input type="email" asp-for="Response.Email" class="form-control" />
+            </label>
+        </div>
+        <div class="mb-2">
+            <label>
+                <span>Department:</span>
+                <input type="text" asp-for="Response.Department" class="form-control" />
+            </label>
+        </div>
+        <div class="mb-2">
+            <label>
+                <span>What career are you interested in:</span>
+                <input type="text" asp-for="Response.Career" class="form-control" placeholder="Fullstack developer"/>
+            </label>
+        </div>
+        <div class="mb-2">
+            <label>
+                <span>What Programming are you comfortable:</span>
+                <input type="text" asp-for="Response.ProgrammingLanguage" class="form-control" />
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Do you have a PC?</span>
+                <input type="text" asp-for="Response.HasPC" class="form-control" placeholder="yes/no" />
+            </label>
+        </div>
+        <button class="btn btn-primary mt-2">Submit</button>
+
+    </form>
+</div>
